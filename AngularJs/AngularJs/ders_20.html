@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 20 || FormDirectives - ng-disabled</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <input type="text" ng-model="username" placeholder="Kullanıcı Adı" />
+
+    <button ng-disabled="!username">Kaydet</button>
+    <button ng-disabled="username.length < 3">Kaydet 2</button>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.username = "";
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

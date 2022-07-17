@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 33 || Filters - 1 </title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <p>{{value | uppercase}}</p>
+    <p>{{value | lowercase}}</p>
+    <p>{{value2 | currency : "EURO " : 1}}</p>
+    <pre>{{value | json}}</pre>     <!--satırları dikkate alarak gösterim uygular-->
+    <p>{{value | json}}</p>
+    <p>{{value3 | number}}</p>
+    <p>{{value4 | date}}</p>
+    <p>{{value5 | limitTo:3}}</p>
+    <p>{{value5 | limitTo:3:1}}</p>
+    <p>{{value6 | limitTo:2}}</p>
+    <p>{{value6 | limitTo:2:1}}</p>
+
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.value = { name: "Mert", age: 24 };
+            $scope.value2 = 10.123;
+            $scope.value3 = "15";
+            $scope.value4 = new Date();
+            $scope.value5 = "Mert";
+            $scope.value6 = ["HTML", "CSS", "JS", "Dart"];
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

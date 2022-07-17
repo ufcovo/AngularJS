@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 24 || ng-switch</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <label> <input type="radio" ng-model="test" value="en" /> İngilizce </label>
+    <label> <input type="radio" ng-model="test" value="is" /> İspanyolca </label>
+    <label> <input type="radio" ng-model="test" value="fr" /> Fransızca </label>
+
+    <div ng-switch="test">
+        <div ng-switch-when="en">
+            <p>Welcome</p>
+        </div>
+
+        <div ng-switch-when="is">
+            <p>Bienvenidos</p>
+        </div>
+
+        <div ng-switch-when="fr">
+            <p>Bienvenue</p>
+        </div>
+    </div>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

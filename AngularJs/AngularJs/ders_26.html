@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 26 || Event Directives</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <h1 ng-mouseenter="firstFunction()" ng-mouseleave="secondFunction()"
+        ng-style="{'background-color':bColor, 'color':tColor}">
+        AngularJS
+    </h1>
+    <hr />
+    <br /><br />
+
+    <h1 ng-mousemove="count=count+1">Mouse Move</h1>
+    <h1 ng-mouseenter="countSecond=countSecond+1">Mouse Enter</h1>
+    <h1 ng-mouseleave="countThird=countThird+1">Mouse Leave</h1>
+    <h1 ng-mousedown="countFourth=countFourth+1">Mouse Down</h1>
+    <h1 ng-mouseup="countFifth=countFifth+1">Mouse Up</h1>
+    <h1 ng-mouseover="countSixth=countSixth+1">Mouse Over</h1>
+
+    <p>Mouse Move : {{count}}</p>
+    <p>Mouse Enter : {{countSecond}}</p>
+    <p>Mouse Leave : {{countThird}}</p>
+    <p>Mouse Down : {{countFourth}}</p>
+    <p>Mouse Up : {{countFifth}}</p>
+    <p>Mouse Over : {{countSixth}}</p>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+            $scope.firstFunction = function () {
+
+                $scope.bColor = "green";
+                $scope.tColor = "white";
+
+            };
+
+            $scope.secondFunction = function () {
+
+                $scope.bColor = "red";
+                $scope.tColor = "black";
+
+            };
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

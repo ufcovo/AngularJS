@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 17 || Directives - ng-bind-template</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <p ng-bind-template="{{name}} {{surname}} {{age}}"></p>
+    
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.name = "Mert";
+            $scope.surname = "Bulut";
+            $scope.age = 24;
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

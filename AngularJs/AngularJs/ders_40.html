@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 40 || Services | $timeout</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <div>{{test}}</div>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope, $timeout) {
+            
+            $scope.test = "Merhaba.";
+            $timeout(function () {
+                $scope.test = "Hoşgeldiniz.";
+            }, 2500);
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

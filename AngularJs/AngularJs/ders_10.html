@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 10 || Directives - ng-if</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <input type="text" ng-model="userName" placeholder="Kullanıcı Adı " />
+
+
+    <p ng-if="!userName">Kullanıcı adı boş bırakılamaz.</p>          <!--false değerinde ekranda çıkmayacak.-->
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.userName = "";
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

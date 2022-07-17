@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+
+
+    <title>AngularJS || Ders 44 || ngRoute</title>
+</head>
+<body ng-app="myApp">
+
+    <p><a href="#/!">Anasayfa</a></p>
+    <p><a href="#!blue">Mavi Sayfa</a></p>
+    <p><a href="#!red">Kırmızı Sayfa</a></p>
+    <p><a href="#!green">Yeşil Sayfa</a></p>
+
+    <div ng-view></div>
+
+    <script>
+
+        var app = angular.module("myApp", ["ngRoute"]);
+
+        app.config(function ($routeProvider) {
+            $routeProvider.when("/", {
+                templateUrl: "ders_40.html"
+            }).when("/blue", {
+                templateUrl: "blue.html"
+            }).when("/red", {
+                templateUrl: "red.html"
+            }).when("/green", {
+                templateUrl: "green.html"
+            });
+        });
+
+    </script>
+
+
+</body>
+</html>

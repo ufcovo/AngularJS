@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 21 || FormDirectives - ng-readonly</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <input type="text" placeholder="Kullanıcı Adı" ng-model="username"/>
+    <br /> <br />
+    <input type="password" placeholder="Parola"  ng-readonly="!username"/>
+
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.username = "";
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 36 || Services - $rootScope</title>
+</head>
+<body ng-app="myApp">
+
+
+    <p ng-controller="myControl">İsim: {{name}}</p>
+    <p ng-controller="myControlSecond">İsim: {{name}}</p>
+
+
+    <h1>İsim (RootScope): {{name}}</h1>
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.name = "Mert";
+        });
+        app.controller("myControlSecond", function ($scope) {
+            $scope.name = "Bugra";
+        });
+
+        app.run(function ($rootScope) {             /*controller'in olmadığı yerde çalışır*/
+            $rootScope.name = "Kutlu";
+        });
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+    <title>AngularJS || Ders 42 || API Application Programming Interface </title>
+
+
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <p>{{number}}</p>
+    <h3>{{isnumber}}</h3>
+    <hr />
+    <p>{{string}}</p>
+    <h3>{{isstring}}</h3>
+    <hr />
+    <p>{{date}}</p>
+    <h3>{{isdate}}</h3>
+    <hr />
+    <p>{{array}}</p>
+    <h3>{{isarray}}</h3>
+    <hr />
+    <p>{{object}}</p>
+    <h3>{{isobject}}</h3>
+    <hr />
+    <p>{{defined}}</p>
+    <h3>{{isdefined}}</h3>
+    <hr />
+    <p>{{undefined}}</p>
+    <h3>{{isundefined}}</h3>
+    <hr />
+    <p>{{function}}</p>
+    <h3>{{isfunction}}</h3>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+            $scope.number = 5;
+            $scope.isnumber = angular.isNumber($scope.number);
+
+            $scope.string = "AngularJs";
+            $scope.isstring = angular.isString($scope.string);
+
+            $scope.date = new Date();
+            $scope.isdate = angular.isDate($scope.date);
+
+            $scope.array = ["AngularJS"];
+            $scope.isarray = angular.isArray($scope.array);
+
+            $scope.object = { age: 26 };
+            $scope.isobject = angular.isObject($scope.object);
+
+
+            $scope.defined = "asdg";
+            $scope.isdefined = angular.isDefined($scope.defined);
+
+            $scope.undefined;
+            $scope.isundefined = angular.isUndefined($scope.undefined);
+
+            $scope.function = function () {
+
+                return 5 + 6;
+
+            };
+
+            $scope.isfunction = angular.isFunction($scope.function);
+
+        });
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 16 || Directives - ng-href</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <p> <a ng-href="{{link}}">Google</a> </p>
+    <p> <a target="_blank" ng-href="{{link}}">Google</a> </p>     <!--yeni sayfada açar-->
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.link = "https://www.google.com";
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 31 || Validation</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <form name="frm">
+        <input type="email" name="email" ng-model="username" placeholder="email" />
+        <input type="number" name="number" ng-model="username2" placeholder="number" />
+        <input type="email" name="email2" ng-model="username3" placeholder="email2" required />
+        <input type="email" name="email3" ng-model="username4" placeholder="email3" required />
+        <input type="submit" />
+    </form>
+
+    <p ng-show="frm.$submitted">Kayıt gönderildi.</p>
+
+    <p ng-show="frm.email.$error.email">Geçersiz email adresi.</p>
+    <p ng-show="frm.number.$error.number">Geçersiz sayı.</p>
+    <p ng-show="frm.email2.$error.required">Geçersiz email2 adresi.</p>
+
+    <h4>Valid: {{frm.email3.$valid}}</h4>
+    <h4>Invalid: {{frm.email3.$invalid}}</h4>
+
+    <h4>Touched: {{frm.email3.$touched}}</h4>
+    <h4>Untouched: {{frm.email3.$untouched}}</h4>
+
+    <h4>Dirty: {{frm.email3.$dirty}}</h4>
+    <h4>Pristine: {{frm.email3.$pristine}}</h4>
+
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

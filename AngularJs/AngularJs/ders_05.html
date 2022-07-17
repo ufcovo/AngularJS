@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 05</title>
+</head>
+<body ng-app="myApp">
+
+    <p ng-controller="myControl">{{name + ' ' + surname}}</p>
+    <p ng-controller="secondControl">{{age}}</p>
+
+    <script>
+
+        var app = angular.module("myApp", []);
+        app.controller("myControl", function ($scope) {
+            $scope.name = "Mert";
+            $scope.surname = "Bulut";
+        });
+
+        app.controller("secondControl", function ($scope) {
+            $scope.age = 30;
+        });
+
+    </script>
+</body>
+</html>

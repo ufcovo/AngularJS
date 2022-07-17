@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 11 || Directives - ng-src</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <img ng-src="{{image}}" />
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.image = "dosyaUzantısı/dosyaismi.jpg";
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

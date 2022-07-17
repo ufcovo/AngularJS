@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 39 || Services | $http</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <div>{{deneme}}</div>
+    <div>{{statusCode}}</div>
+    <div>{{statusText}}</div>
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope, $http) {
+
+            //$http.get("text.txt").then(function (response) {
+            //    $scope.deneme = response.data;
+            //    $scope.statusCode = response.status;
+            //    $scope.statusText = response.statusText;
+            //});
+
+            $http({
+                method: "GET",
+                url: "text.txt"
+            }).then(function basarili(response) {
+                $scope.deneme = response.data;
+                $scope.statusCode = response.status;
+                $scope.statusText = response.statusText;
+            }, function error(response) {
+                //$scope.statusCode = response.status;
+                //$scope.statusText = response.statusText;
+                $scope.deneme = "Dosya bulunamadı."
+
+            });
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

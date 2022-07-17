@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 38 || Services | $location</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <p>URL: {{url}}</p>
+    <p>Protocol: {{url2}}</p>
+    <p>Host: {{url3}}</p>
+    <p>Port: {{url4}}</p>
+    <p>URL: {{url5}}</p>
+    <p>Path: {{url6}}</p>
+
+
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope, $location) {
+            $scope.url = $location.absUrl();
+            $scope.url2 = $location.protocol();
+            $scope.url3 = $location.host();
+            $scope.url4 = $location.port();
+            $scope.url5 = $location.url("deneme");   //url in sonuna ekleme yapıyor
+            $scope.url6 = $location.path("dsadasd");
+
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

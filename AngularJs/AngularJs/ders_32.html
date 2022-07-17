@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 32 || Validation - CSS Class </title>
+
+    <style>
+        /*input.ng-invalid{
+            outline: 2px solid red;
+        }*/
+        /*input.ng-valid {
+            outline: 2px solid green;
+        }*/
+        /*input.ng-valid-required {
+            outline: 2px solid blue;
+        }*/
+        /*input.ng-invalid-email{
+            outline: 2px solid blue;
+        }*/
+        /*input.ng-touched{
+            outline: 2px solid red;
+        }*/
+        /*input.ng-untouched {
+            outline: 2px solid red;
+        }*/
+        /*input.ng-dirty {
+            outline: 2px solid red;
+        }*/
+        /*input.ng-pristine {
+            outline: 2px solid red;
+        }*/
+        #frmId.ng-submitted{
+            border: 2px solid green;
+        }
+           
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+
+    <form name="frm" id="frmId">
+        <input type="email" name="email" ng-model="email" required />
+        <input type="submit" />
+    </form>
+
+    <p ng-show="frm.$submitted">Kayıt gönderildi.</p>
+
+
+
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

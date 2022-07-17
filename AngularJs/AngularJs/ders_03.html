@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 03</title>
+</head>
+<body ng-app="">
+
+    <div ng-init="isim='Mert'; soyisim='Bulut'">
+        <p>İsim: {{isim + ' ' + soyisim}}</p>
+        <p ng-bind="isim"></p> <!--ng-bind ile p içi doldurulamaz-->
+        <p ng-bind="isim + ' ' + soyisim"></p>
+    </div>
+
+    <div ng-init="kisi={isim:'Mert', soyisim:'Bulut'}">
+        <p ng-bind="isim + ' ' + soyisim"></p>
+    </div>
+
+    <div ng-init="sayilar=[1,2,3,4,5]">
+        <p>{{sayilar[1]}}</p>
+    </div>
+
+    <div ng-init="renk='red'">
+        <p style="background-color:{{renk}}" ng-model="">Paragraph</p>
+    </div>
+
+</body>
+</html>

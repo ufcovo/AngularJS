@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 34 || Filters - 2</title>
+
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            min-width: 250px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    
+
+    <table>
+        <thead>
+            <tr>
+                <th ng-click="sortBy('ad')">İSİM</th>
+                <th ng-click="sortBy('soyad')">SOYİSİM</th>
+                <th ng-click="sortBy('sehir')">ŞEHİR</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="x in kisiler | orderBy: sort">
+                <td>{{x.ad}}</td>
+                <td>{{x.soyad}}</td>
+                <td>{{x.sehir}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.sortBy = function (x) {
+                $scope.sort = x;
+            };
+            $scope.kisiler = [
+
+                {
+                    "ad": "Doruk",
+                    "soyad": "Akgul",
+                    "sehir": "Ankara"
+                },
+
+                {
+                    "ad": "Barış",
+                    "soyad": "Kuşcu",
+                    "sehir": "İzmir"
+                },
+
+                {
+                    "ad": "Kılıç",
+                    "soyad": "Kalender",
+                    "sehir": "Muğla"
+                },
+
+                {
+                    "ad": "İrem",
+                    "soyad": "Şişman",
+                    "sehir": "Adana"
+                },
+
+                {
+                    "ad": "Yağmur",
+                    "soyad": "Aydeniz",
+                    "sehir": "Antalya"
+                },
+
+                {
+                    "ad": "Mehmet Emin",
+                    "soyad": "Koçer",
+                    "sehir": "Antalya"
+                },
+
+                {
+                    "ad": "İmran",
+                    "soyad": "Özcan",
+                    "sehir": "Ordu"
+                },
+
+                {
+                    "ad": "Batuhan",
+                    "soyad": "Küçükakdere",
+                    "sehir": "Giresun"
+                }
+            ];
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

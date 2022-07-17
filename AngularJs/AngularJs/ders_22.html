@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 22 || FormDirectives - ng-maxlength / ng-minlength</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    
+    <form name="frm">
+        <input type="text" ng-model="username" name="username" ng-maxlength="10" placeholder="max" />
+        <p ng-if="!frm.username.$valid">Karakter sayısı fazla.</p>
+
+        <input type="text" ng-model="username" name="username2" ng-minlength="5" placeholder="min" />
+        <p ng-if="!frm.username2.$valid">Karakter sayısı az.</p>
+
+        <input type="text" ng-model="username" name="username3" ng-minlength="5" ng-maxlength="10" placeholder="max-min"/>
+        <p ng-if="!frm.username3.$valid">Karakter sayısı sınırlar arasında değil.</p>
+
+
+    </form>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

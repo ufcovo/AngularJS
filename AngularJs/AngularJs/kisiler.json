@@ -1,0 +1,60 @@
+{
+
+	"kisiler" : [
+	
+		
+		
+		{
+		"ad" : "Doruk",
+		"soyad" : "Akgul",
+		"sehir" : "Ankara"
+		},
+		
+		{
+		"ad" : "Barış",
+		"soyad" : "Kuşcu",
+		"sehir" : "İzmir"
+		},
+		
+		{
+		"ad" : "Kılıç",
+		"soyad" : "Kalender",
+		"sehir" : "Muğla"
+		},
+		
+		{
+		"ad" : "İrem",
+		"soyad" : "Şişman",
+		"sehir" : "Adana"
+		},
+		
+		{
+		"ad" : "Yağmur",
+		"soyad" : "Aydeniz",
+		"sehir" : "Antalya"
+		},
+		
+		{
+		"ad" : "Mehmet Emin",
+		"soyad" : "Koçer",
+		"sehir" : "Antalya"
+		},
+		
+		{
+		"ad" : "İmran",
+		"soyad" : "Özcan",
+		"sehir" : "Ordu"
+		},
+		
+		{
+		"ad" : "Batuhan",
+		"soyad" : "Küçükakdere",
+		"sehir" : "Giresun"
+		}
+		
+		
+		
+	]
+
+
+}

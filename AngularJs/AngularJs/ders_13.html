@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AngularJS || Ders 13 || Directives - ng-style</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <p ng-style="test">AngularJS öğreniyorum.</p>
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.test = {
+                "color": "blue",
+                "background-color": "yellow"
+            };
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

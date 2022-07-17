@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <title>AngularJS || Ders 25 || ng-options </title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+    <select ng-model="test" ng-options="x for x in languages">
+    </select>
+    <p>{{test}}</p>
+
+    <select ng-model="test2" ng-options="x.name for x in people">
+    </select>
+
+    <p>{{test2.name}}</p>
+
+    <select ng-model="test3" ng-options="x for (x,y) in list">    <!--x yerine y dersem de ilk isimler çıkacak-->
+    </select>
+
+    <p>{{test3}}</p>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+
+            $scope.languages = ["İngilizce", "İspanyolca", "Almanca"];
+
+            $scope.people = [{ name: "Ali", language: "İngilizce" },
+            { name: "Mehmet", language: "Almanca" }];
+
+            $scope.list = {
+
+                nameFirst: "Ali",
+                nameSecond: "Mehmet",
+                nameThird: "Ayşe"
+            };
+
+
+        });
+    </script>
+</body>
+</html>

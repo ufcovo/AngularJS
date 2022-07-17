@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <title>AngularJS || Ders 27 || Event Directives-2</title>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+
+    <!--<input type="text" ng-keypress="firstFunction()" />
+
+    <p ng-show="test">Tıklandı</p>-->
+    <!--<button ng-click="secondFunction()">Tıkla</button>
+    <div style="width:750px; height:750px" ng-style="{'background-image':goruntu}">
+
+    </div>-->
+
+    <button ng-dblclick="thirdFunction()">Tıkla</button>
+    <div ng-show="test">
+        <ul>
+            <li>Html</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li>Angular</li>
+            <li>AngularJS</li>
+            <li>NPM</li>
+        </ul>
+    </div>
+
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope) {
+            $scope.firstFunction = function () {
+                $scope.test = true;
+            };
+
+            $scope.goruntu = "url(goruntu1.jpg)";
+
+            $scope.secondFunction = function () {
+                $scope.goruntu = "url(goruntu2.jpg)";
+            };
+
+            $scope.thirdFunction = function () {
+                $scope.test = !$scope.test;
+            };
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+
+    <title>AngularJS || Uygulama - 1 </title>
+
+    <style>
+        table, tr, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+            min-width: 150px; 
+            text-align: center;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myControl">
+
+   
+    <table>
+        <thead>
+            <tr>
+                <th>AD</th>
+                <th>SOYAD</th>
+                <th>SEHİR</th>
+            </tr>
+        </thead>
+
+        <tbody ng-repeat="x in people">
+            <tr>
+                <td>{{x.ad}}</td>
+                <td>{{x.soyad}}</td>
+                <td>{{x.sehir}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+
+        var app = angular.module("myApp", []);
+
+        app.controller("myControl", function ($scope, $http) {
+
+            $http.get("kisiler.json").then(function (response) {
+                $scope.people = response.data.kisiler;
+            });
+
+        });
+
+    </script>
+
+
+</body>
+</html>
